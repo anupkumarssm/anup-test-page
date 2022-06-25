@@ -14,6 +14,7 @@
   <h1>My First Bootstrap Page</h1>
   <p>Resize this responsive page to see the effect!!!!</p> 
   name : {{name}}<br> line_items:: {{line_items|json}}
+  <div id="searchdata"></div>
 </div>
   
 <div class="container">
@@ -36,7 +37,18 @@
   </div>
  
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  var pathname = window.location.pathname; // Returns path only (/path/example.html)
+var url      = window.location.href;     // Returns full URL (https://example.com/path/example.html)
+var origin   = window.location.search;   // Returns base URL (https://example.com)
+console.log(pathname)
+console.log(url)
+console.log(origin)
+$("#searchdata").html(origin)
+});
+</script>
 </body>
 </html>
 
